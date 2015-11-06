@@ -29,6 +29,7 @@ cp example.env.sh env.sh
 
 If you want to test this run watch in one terminal, this will request to switch from blue to green as much as possible, for me it runs about every 4 seconds (it tries to pull the latest which there is none), watch is synchronous but locking is also implemented to prevent two redeploys at once, which would cause a collision
 ```
+# "brew install watch" if you do not have watch installed on OSX
 watch -n0 sh switch.sh
 ```
 
