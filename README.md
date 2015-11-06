@@ -1,6 +1,6 @@
 # simple-docker-blue-green
 
-This is intended to be used with docker hub to enable very simple blue green switching redeploys, filling in the last part of the pipeline for [github commit] -> [docker hub build] -> [service redeploy] 
+This is intended to be used with docker hub to enable very simple blue green switching redeploys, filling in the last part of the pipeline for [github commit] -> [docker hub build] -> [service redeploy]. While both blue and green are running the nginx proxy will load balance between them
 
 # Setup
 
@@ -125,6 +125,7 @@ export SLEEPTIME=1
 
 # TODO
 - Add http service to consume the webhook from docker hub
+- Allow arbitrary numbers of instances for blue and green
 - Make this an actual robust project in something other than bash
 - Try with multiple nodes using swarm (should work fine as is... maybe)
 - revert back if upgrade failed
