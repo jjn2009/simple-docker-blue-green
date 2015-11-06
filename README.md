@@ -1,6 +1,6 @@
 # simple-docker-blue-green
 
-This is intended to be used with docker hub to enable very simple blue green switching redeploys, filling in the last part of the pipeline for [github commit] -> [docker hub build] -> [service redeploy]. While both blue and green are running the nginx proxy will load balance between them
+This is intended to be used with docker hub to enable very simple blue green switching redeploys, filling in the last part of the pipeline for [github commit] -> [docker hub build] -> [service redeploy]. While both blue and green are running the nginx proxy will load balance between them. nginx-proxy is used for picking up events from the docker daemon and using those events to determine which containers should be added to the nginx config https://github.com/jwilder/nginx-proxy
 
 # Setup
 
